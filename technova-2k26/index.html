@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TECHNOVA 2.0</title>
+<meta name="description" content="TECHNOVA 2.0 (2K26) — the technical fest of the Department of CSE – AI &amp; ML, ATME College of Engineering, Mysuru.">
+<meta name="theme-color" content="#f7f9f8">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#events">Skip to events</a>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="TECHNOVA 2.0 home">
+      <img src="assets/technova-logo.png" alt="" width="32" height="32">
+      <span data-t="fest.title">TECHNOVA 2.0</span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="links">Menu</button>
+    <nav id="links" class="links" aria-label="Main">
+      <a href="#events">Events</a>
+      <a href="#about">About</a>
+      <a href="#venue">Venue</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <h1 class="rise"><span data-t="fest.title">TECHNOVA 2.0</span><small data-t="fest.edition">2K26</small></h1>
+      <p class="lead rise" style="--d:.12s" data-t="fest.tagline"></p>
+      <div class="cta rise" style="--d:.24s">
+        <a class="btn primary" href="#events">Explore events</a>
+        <a class="btn ghost" href="#events" data-register-all>Register</a>
+      </div>
+      <ul class="meta rise" style="--d:.36s">
+        <li data-t="fest.date"></li>
+        <li data-t="fest.venue"></li>
+        <li data-t="fest.organiser"></li>
+      </ul>
+    </div>
+    <div class="hero-art">
+      <img id="heroImg" data-img="fest.festArtwork" alt="TECHNOVA 2.0 festival artwork" width="1000" height="1000" fetchpriority="high">
+    </div>
+  </section>
+
+  <section class="sec wrap about" id="about">
+    <h2>About TECHNOVA</h2>
+    <p data-t="fest.about"></p>
+  </section>
+
+  <section class="sec wrap" id="events">
+    <div class="sec-head">
+      <h2>Events</h2>
+      <div class="docs" id="docs"></div>
+    </div>
+    <div class="grid" id="eventGrid"></div>
+  </section>
+
+  <section class="sec wrap" id="workshop" hidden>
+    <article class="workshop">
+      <div>
+        <h2 data-t="workshop.title"></h2>
+        <p data-t="workshop.description"></p>
+        <p class="when" data-t="workshop.date"></p>
+      </div>
+      <div id="workshopBtn"></div>
+    </article>
+  </section>
+
+  <section class="sec wrap venue" id="venue">
+    <div class="venue-txt">
+      <h2>Venue</h2>
+      <p class="big" data-t="fest.venue"></p>
+      <p data-t="fest.address"></p>
+      <p class="when" data-t="fest.date"></p>
+      <p class="reg" data-t="fest.registration"></p>
+      <a class="btn primary" data-link="fest.mapsUrl" target="_blank" rel="noopener noreferrer" hidden>Open in Google Maps</a>
+    </div>
+    <img class="campus" data-img="fest.campusImage" alt="ATME College of Engineering campus" loading="lazy" width="1200" height="700">
+  </section>
+
+  <section class="sec wrap" id="contact">
+    <h2>Contact</h2>
+    <ul class="contacts" id="contactList"></ul>
+    <div class="social" data-social></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <strong data-t="fest.title"></strong>
+      <p>Organised by:<br><span data-t="fest.organiser"></span><br><span data-t="fest.collegeFull"></span></p>
+    </div>
+    <img class="clogo" data-img="fest.collegeLogo" alt="College logo" width="64" height="64" loading="lazy">
+    <div class="social" data-social></div>
+  </div>
+  <p class="wrap copy">Copyright © 2026 TECHNOVA</p>
+</footer>
+
+<noscript><p style="padding:24px">Please enable JavaScript to view TECHNOVA 2K26 events.</p></noscript>
+<script src="script.js"></script>
+</body>
+</html>
