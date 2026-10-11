@@ -11,13 +11,14 @@ const SITE = {
     title: "TECHNOVA 2.0",
     tagline: "Where ideas meet technology.",
     about: "[ADD 2–3 LINES ABOUT TECHNOVA 2K26]",
-    date: "[ADD FEST DATE]",
-    registration: "Registration: 9:00 – 10:00 AM",
+    date: "15 – 16 October 2026",
+    registration: "Day 1 · Registration & Inaugural: 9:00 – 10:00 AM\nDay 2 · Valedictory: 3:00 – 4:30 PM",
     venue: "ATME College of Engineering, Mysuru",
     address: "ATME College of Engineering, Mysuru - 570028",
     organiser: "Department of CSE – AI & ML",
     collegeFull: "ATME College of Engineering, Mysuru",
     collegeLogo: "assets/college-logo.png",     // replace file, keep the name
+    ietLogo: "assets/iet-logo.png",
     festArtwork: "assets/hero-art.png",
     campusImage: "assets/college-campus.jpg",
     // Optional documents — shown only when a real https:// link is pasted
@@ -42,12 +43,12 @@ const SITE = {
 
   // One block per event. Add, remove or reorder freely.
   events: [
-    { name: "Cyber Mystery", category: "Cyber", description: "[ADD 1–2 LINE DESCRIPTION]", date: "[ADD SLOT: 10:00–11:30 / 11:30–1:30 / 2:00–4:30]", fee: "₹249", registerUrl: "[PASTE GOOGLE FORM / REGISTRATION URL]" },
-    { name: "Tech Vault", category: "Tech", description: "[ADD 1–2 LINE DESCRIPTION]", date: "[ADD SLOT: 10:00–11:30 / 11:30–1:30 / 2:00–4:30]", fee: "₹199", registerUrl: "[PASTE GOOGLE FORM / REGISTRATION URL]" },
-    { name: "Mystery Startup", category: "Startup", description: "[ADD 1–2 LINE DESCRIPTION]", date: "[ADD SLOT: 10:00–11:30 / 11:30–1:30 / 2:00–4:30]", fee: "₹199", registerUrl: "[PASTE GOOGLE FORM / REGISTRATION URL]" },
-    { name: "Kahoot – Mind Matrix", category: "Quiz", description: "[ADD 1–2 LINE DESCRIPTION]", date: "[DATE / TIME]", fee: "₹99", registerUrl: "[PASTE GOOGLE FORM / REGISTRATION URL]" },
-    { name: "Escape Room", category: "Challenge", description: "[ADD 1–2 LINE DESCRIPTION]", date: "[DATE / TIME]", fee: "₹199", registerUrl: "[PASTE GOOGLE FORM / REGISTRATION URL]" },
-    { name: "Mission Unlock", category: "Challenge", description: "[ADD 1–2 LINE DESCRIPTION]", date: "[DATE / TIME]", fee: "₹199", registerUrl: "[PASTE GOOGLE FORM / REGISTRATION URL]" }
+    { name: "Tech Vault", category: "Tech", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 1 · 15 Oct, 10:00–11:30 AM", fee: "₹199 / team", registerUrl: "[PASTE GOOGLE FORM / REGISTRATION URL]" },
+    { name: "Mind Matrix", category: "Quiz", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 1 · 15 Oct, 11:30 AM–1:30 PM", fee: "₹99 / team", registerUrl: "[PASTE GOOGLE FORM / REGISTRATION URL]" },
+    { name: "Cyber Mystery", category: "Cyber", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 1 · 15 Oct, 2:00–4:30 PM", fee: "₹249 / team", registerUrl: "https://forms.gle/yEGjYdjyJvePHTWu5" },
+    { name: "Mystery Startup", category: "Startup", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 2 · 16 Oct, 9:00–11:00 AM", fee: "₹199 / team", registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfYIsxLWVphTSu-B9qYPjWuIdp12BNwcHDXi0AR06RaufbedQ/viewform?usp=header" },
+    { name: "Escape Room", category: "Challenge", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 2 · 16 Oct, 11:00 AM–12:30 PM", fee: "₹199 / team", registerUrl: "[PASTE GOOGLE FORM / REGISTRATION URL]" },
+    { name: "Mission Unlock", category: "Challenge", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 2 · 16 Oct, 1:30–3:00 PM", fee: "₹199 / team", registerUrl: "https://forms.gle/re3h25rZo9D2h1AT9" }
   ],
 
   workshop: {

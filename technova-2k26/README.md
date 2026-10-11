@@ -11,8 +11,9 @@ technova-2k26/
 └── assets/
     ├── technova-logo.png     small mark used in the header
     ├── hero-art.png          big fest artwork in the hero
-    ├── college-logo.png      PLACEHOLDER – replace with your logo
-    ├── college-campus.jpg    PLACEHOLDER – replace with a campus photo
+    ├── college-logo.png      ATME College of Engineering logo
+    ├── iet-logo.png          IET onCampus ATMECE logo
+    ├── college-campus.jpg    campus photo (replace with a larger one if you have it)
     └── favicon.png           browser tab icon
 ```
 
@@ -35,7 +36,7 @@ technova-2k26/
 
 ## Deploy (no server needed)
 - **Netlify:** app.netlify.com/drop → drag the whole folder in.
-- **Vercel:** push to GitHub → Add New Project → Import → Framework "Other" → Deploy.
+- **Vercel:** push the folder to a GitHub repo → vercel.com → Add New Project → Import the repo → Framework Preset "Other" → Deploy. (Or from a terminal inside the folder: `npx vercel --prod`.) No build command needed.
 - **GitHub Pages:** push to GitHub → Settings → Pages → Deploy from branch `main` / root.
 - **Cloudflare Pages:** Connect repo → Framework "None", build command empty, output directory `/`.
 
