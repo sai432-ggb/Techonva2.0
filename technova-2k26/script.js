@@ -44,7 +44,7 @@ const SITE = {
   // One block per event. Add, remove or reorder freely.
   events: [
     { name: "Tech Vault", category: "Tech", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 1 · 15 Oct, 10:00–11:30 AM", fee: "₹199 / team", registerUrl: "[PASTE GOOGLE FORM / REGISTRATION URL]" },
-    { name: "Mind Matrix", category: "Quiz", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 1 · 15 Oct, 11:30 AM–1:30 PM", fee: "₹99 / team", registerUrl: "[PASTE GOOGLE FORM / REGISTRATION URL]" },
+    { name: "Mind Matrix", category: "Quiz", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 1 · 15 Oct, 11:30 AM–1:30 PM", fee: "₹99 / team", registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdDQDNDViRCEc2jxB7txV_ulCby6j9Zy5sa-haCb85Q-I6XUg/viewform?usp=publish-editor" },
     { name: "Cyber Mystery", category: "Cyber", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 1 · 15 Oct, 2:00–4:30 PM", fee: "₹249 / team", registerUrl: "https://forms.gle/yEGjYdjyJvePHTWu5" },
     { name: "Mystery Startup", category: "Startup", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 2 · 16 Oct, 9:00–11:00 AM", fee: "₹199 / team", registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfYIsxLWVphTSu-B9qYPjWuIdp12BNwcHDXi0AR06RaufbedQ/viewform?usp=header" },
     { name: "Escape Room", category: "Challenge", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 2 · 16 Oct, 11:00 AM–12:30 PM", fee: "₹199 / team", registerUrl: "[PASTE GOOGLE FORM / REGISTRATION URL]" },
