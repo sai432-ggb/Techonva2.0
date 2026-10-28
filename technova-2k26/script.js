@@ -36,9 +36,9 @@ const SITE = {
   },
 
   contacts: [
-    { name: "[CONTACT PERSON 1]", phone: "[PHONE NUMBER]" },
-    { name: "[CONTACT PERSON 2]", phone: "[PHONE NUMBER]" },
-    { name: "[CONTACT PERSON 3]", phone: "[PHONE NUMBER]" }
+    { name: "KISHORE", phone: "+91 98866 51313" },
+    { name: "Drushya", phone: "+91 821 778 0343" },
+    { name: "Mohammed Ismail", phone: "+916362373573" }
   ],
 
   // One block per event. Add, remove or reorder freely.
