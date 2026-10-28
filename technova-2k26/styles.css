@@ -59,9 +59,14 @@ h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.03em;line-height:1.1;font
 .tag{font-size:13px;font-weight:700;color:var(--teal);background:var(--tint);padding:3px 12px;border-radius:999px;margin-bottom:16px}
 .card h3{font-size:1.35rem;line-height:1.2;letter-spacing:-.02em;font-weight:800;margin-bottom:8px}
 .card p{color:var(--muted);font-size:16px;margin-bottom:18px}
-.facts{display:flex;gap:28px;margin:0 0 22px;margin-top:auto;padding-top:4px}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px;margin:0 0 22px;margin-top:auto;padding-top:4px;width:100%}
 .facts dt{font-size:13px;color:var(--muted);font-weight:600}
-.facts dd{margin:0;font-weight:700;font-size:15px}
+.facts dd{margin:0;font-weight:700;font-size:15px;overflow-wrap:anywhere}
+.coordinators{font-size:13px;line-height:1.45;margin:-6px 0 18px;width:100%;color:var(--muted)}
+.coordinator-label{display:block;color:var(--ink);font-size:12px;font-weight:700;margin-bottom:4px}
+.coordinator{display:flex;justify-content:space-between;gap:8px}
+.coordinator a{color:var(--teal);font-weight:600;text-decoration:none;white-space:nowrap}
+.coordinator a:hover{text-decoration:underline}
 .card .btn{margin-top:auto}
 .facts+.btn{margin-top:0}
 .reveal{opacity:0;transform:translateY(18px)}

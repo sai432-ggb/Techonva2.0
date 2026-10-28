@@ -45,9 +45,9 @@ const SITE = {
   events: [
     { name: "Tech Vault", category: "Tech", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 1 · 15 Oct, 10:00–11:30 AM", fee: "₹199 / team", registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdv3LcZCetv9kvJ4qzX3Ge0a3vy7e3v5k58rANfz1jJgjO91Q/viewform?usp=dialog" },
     { name: "Mind Matrix", category: "Quiz", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 1 · 15 Oct, 11:30 AM–1:30 PM", fee: "₹99 / team", registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdDQDNDViRCEc2jxB7txV_ulCby6j9Zy5sa-haCb85Q-I6XUg/viewform?usp=publish-editor" },
-    { name: "Cyber Mystery", category: "Cyber", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 1 · 15 Oct, 2:00–4:30 PM", fee: "₹249 / team", registerUrl: "https://forms.gle/yEGjYdjyJvePHTWu5" },
+    { name: "Cyber Mystery", category: "Cyber", description: "Follow each clue and uncover the secrets hidden in this cyber mystery.", date: "3 November 2026 · 9:00–11:30 AM", fee: "₹249", prize: "Winners ₹2,000 · Runners-up ₹1,500", teamSize: "2–4 members", venue: "ATME College of Engineering", coordinators: [{ name: "Umme Hani", phone: "7975534156" }, { name: "Rafeeq Ahmed", phone: "9663125134" }], registerUrl: "https://forms.gle/yEGjYdjyJvePHTWu5" },
     { name: "Mystery Startup", category: "Startup", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 2 · 16 Oct, 9:00–11:00 AM", fee: "₹199 / team", registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfYIsxLWVphTSu-B9qYPjWuIdp12BNwcHDXi0AR06RaufbedQ/viewform?usp=header" },
-    { name: "Escape Room", category: "Challenge", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 2 · 16 Oct, 11:00 AM–12:30 PM", fee: "₹199 / team", registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfem0qctdoOo4S9Ac3kOi-XWu1WOiDVfFj1hLl9Ym-bYfPZ8w/viewform?usp=dialog" },
+    { name: "Web Wizards", category: "Web Development", description: "Design, develop and deploy a real website using AI tools. Bring your own laptop.", date: "3 November 2026 · 11:30 AM–1:30 PM", fee: "₹150", prize: "Winners ₹1,500 · Runners-up ₹900", teamSize: "3 members", venue: "ATME College Campus · Room AB401", coordinators: [{ name: "Nethra", phone: "+91 93806 80945" }, { name: "CP Pavithra", phone: "+91 91081 56865" }] },
     { name: "Mission Unlock", category: "Challenge", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 2 · 16 Oct, 1:30–3:00 PM", fee: "₹199 / team", registerUrl: "https://forms.gle/re3h25rZo9D2h1AT9" }
   ],
 
@@ -100,8 +100,21 @@ const grid = $("#eventGrid");
 SITE.events.forEach(ev => {
   const card = make("article", "card reveal");
   card.append(make("span", "tag", ev.category), make("h3", "", ev.name), make("p", "", ev.description));
+  if (ev.coordinators) {
+    const coordinators = make("div", "coordinators");
+    coordinators.append(make("span", "coordinator-label", "Student coordinators"));
+    ev.coordinators.forEach(person => {
+      const row = make("div", "coordinator");
+      row.append(make("span", "", person.name));
+      const phone = make("a", "", person.phone);
+      phone.href = "tel:" + person.phone.replace(/[^\d+]/g, "");
+      row.append(phone);
+      coordinators.append(row);
+    });
+    card.append(coordinators);
+  }
   const meta = make("dl", "facts");
-  [["When", ev.date], ["Fee", ev.fee]].forEach(([k, v]) => {
+  [["When", ev.date], ["Fee", ev.fee], ["Prize", ev.prize], ["Team size", ev.teamSize], ["Venue", ev.venue]].forEach(([k, v]) => {
     if (!v) return;
     const d = make("div"); d.append(make("dt", "", k), make("dd", "", v)); meta.append(d);
   });
