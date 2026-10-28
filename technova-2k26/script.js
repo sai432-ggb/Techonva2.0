@@ -31,8 +31,8 @@ const SITE = {
   },
 
   social: {
-    instagram: "[PASTE INSTAGRAM URL]",
-    linkedin: "[PASTE LINKEDIN URL]"
+    instagram: "https://www.instagram.com/iet_oncampus_atmece?vrfl=YXg3Y3VxaWtwcGIy",
+    linkedin: "https://www.linkedin.com/company/iet-oncampus-atmece/"
   },
 
   contacts: [
