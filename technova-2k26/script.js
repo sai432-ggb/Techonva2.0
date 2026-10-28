@@ -11,7 +11,7 @@ const SITE = {
     title: "TECHNOVA 2.0",
     tagline: "Where ideas meet technology.",
     about: "[ADD 2–3 LINES ABOUT TECHNOVA 2K26]",
-    date: "15 – 16 October 2026",
+    date: "2 – 3 November 2026",
     registration: "Day 1 · Registration & Inaugural: 9:00 – 10:00 AM\nDay 2 · Valedictory: 3:00 – 4:30 PM",
     venue: "ATME College of Engineering, Mysuru",
     address: "ATME College of Engineering, Mysuru - 570028",

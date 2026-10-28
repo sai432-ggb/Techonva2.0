@@ -105,6 +105,13 @@ h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.03em;line-height:1.1;font
 .soc{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;background:var(--surface);transition:color .2s,border-color .2s,transform .2s}
 .soc:hover{color:var(--teal);border-color:var(--teal);transform:translateY(-2px)}
 
+/* Program coordinators */
+.program-coordinator-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.program-coordinator{border-top:2px solid var(--line);padding:14px 0 0}
+.program-coordinator-role{display:block;color:var(--teal);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
+.program-coordinator h3{font-size:18px;line-height:1.3;font-weight:800;margin-bottom:4px}
+.program-coordinator p{font-size:14px;line-height:1.5;color:var(--muted)}
+
 /* Partner logos */
 .orgs{display:flex;align-items:center;flex-wrap:wrap;gap:14px 22px;margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
 .orgs span{font-size:13px;font-weight:600;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;width:100%}
@@ -136,6 +143,7 @@ h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.03em;line-height:1.1;font
   .hero-art{order:-1;max-width:300px;justify-self:center}
   .venue{grid-template-columns:1fr}
   .contacts{grid-template-columns:1fr}
+  .program-coordinator-grid{grid-template-columns:1fr}
   .sec{padding:52px 0}
 }
 @media (max-width:620px){
