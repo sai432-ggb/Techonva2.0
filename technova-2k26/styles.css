@@ -106,11 +106,13 @@ h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.03em;line-height:1.1;font
 .soc:hover{color:var(--teal);border-color:var(--teal);transform:translateY(-2px)}
 
 /* Program coordinators */
-.program-coordinator-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.program-coordinator-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
 .program-coordinator{border-top:2px solid var(--line);padding:14px 0 0}
 .program-coordinator-role{display:block;color:var(--teal);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
 .program-coordinator h3{font-size:18px;line-height:1.3;font-weight:800;margin-bottom:4px}
 .program-coordinator p{font-size:14px;line-height:1.5;color:var(--muted)}
+.program-coordinator-phone{color:var(--teal);font-weight:600;text-decoration:none}
+.program-coordinator-phone:hover{text-decoration:underline}
 
 /* Partner logos */
 .orgs{display:flex;align-items:center;flex-wrap:wrap;gap:14px 22px;margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
