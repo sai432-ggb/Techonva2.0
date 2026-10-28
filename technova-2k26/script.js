@@ -36,8 +36,8 @@ const SITE = {
   },
 
   contacts: [
-    { name: "KISHORE", phone: "+91 98866 51313" },
-    { name: "Drushya", phone: "+91 821 778 0343" },
+    { name: "Kishore", phone: "+91 98866 51313" },
+    { name: "Drushya M", phone: "+91 821 778 0343" },
     { name: "Mohammed Ismail", phone: "+916362373573" }
   ],
 
