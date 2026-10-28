@@ -44,11 +44,11 @@ const SITE = {
   // One block per event. Add, remove or reorder freely.
   events: [
     { name: "Tech Vault", category: "Tech", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 1 · 15 Oct, 10:00–11:30 AM", fee: "₹199 / team", registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdv3LcZCetv9kvJ4qzX3Ge0a3vy7e3v5k58rANfz1jJgjO91Q/viewform?usp=dialog" },
-    { name: "Mind Matrix", category: "Quiz", description: "A fun and challenging quiz event for curious minds.", date: "2 November 2026 · 12:00–1:30 PM", fee: "₹99", prize: "Winner ₹1,000 · Runner-up ₹500", teamSize: "2", venue: "ATME College Campus", coordinators: [{ name: "Noorin Sadiq Wahab", phone: "8088831463" }, { name: "Nida Shaikh", phone: "9686197328" }], registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdDQDNDViRCEc2jxB7txV_ulCby6j9Zy5sa-haCb85Q-I6XUg/viewform?usp=publish-editor" },
-    { name: "Cyber Mystery", category: "Cyber", description: "Follow each clue and uncover the secrets hidden in this cyber mystery.", date: "3 November 2026 · 9:00–11:30 AM", fee: "₹249", prize: "Winners ₹2,000 · Runners-up ₹1,500", teamSize: "2–4 members", venue: "ATME College of Engineering", coordinators: [{ name: "Umme Hani", phone: "7975534156" }, { name: "Rafeeq Ahmed", phone: "9663125134" }], registerUrl: "https://forms.gle/yEGjYdjyJvePHTWu5" },
+    { name: "Mind Matrix", category: "Quiz", description: "A fun and challenging quiz event for curious minds.", date: "2 November 2026 · 12:00–1:30 PM", fee: "₹99", prize: "Winner ₹1,000 · Runner-up ₹500", teamSize: "2", venue: "ATME College Campus", facultyCoordinator: { name: "Ms. Suma H C", role: "Assistant Professor", department: "CSE–AI & ML, ATMECE Mysuru" }, coordinators: [{ name: "Noorain Sadiq Wahab", phone: "8088831463" }, { name: "Nida Shaikh", phone: "9686197328" }], registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdDQDNDViRCEc2jxB7txV_ulCby6j9Zy5sa-haCb85Q-I6XUg/viewform?usp=publish-editor" },
+    { name: "Cyber Mystery", category: "Cyber", description: "Follow each clue and uncover the secrets hidden in this cyber mystery.", date: "3 November 2026 · 9:00–11:30 AM", fee: "₹249", prize: "Winners ₹2,000 · Runners-up ₹1,500", teamSize: "2–4 members", venue: "ATME College of Engineering", facultyCoordinator: { name: "Dr. Hussana Johar R. B.", role: "Associate Professor", department: "CSE–AI & ML, ATMECE Mysuru" }, coordinators: [{ name: "Umme Hani", phone: "7975534156" }, { name: "Rafeeq Ahmed", phone: "9663125134" }], registerUrl: "https://forms.gle/yEGjYdjyJvePHTWu5" },
     { name: "Mystery Startup", category: "Startup", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 2 · 16 Oct, 9:00–11:00 AM", fee: "₹199 / team", registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfYIsxLWVphTSu-B9qYPjWuIdp12BNwcHDXi0AR06RaufbedQ/viewform?usp=header" },
-    { name: "Web Wizards", category: "Web Development", description: "Design, develop and deploy a real website using AI tools. Bring your own laptop.", date: "3 November 2026 · 11:30 AM–1:30 PM", fee: "₹150", prize: "Winners ₹1,500 · Runners-up ₹900", teamSize: "3 members", venue: "ATME College Campus · Room AB401", coordinators: [{ name: "Nethra", phone: "+91 93806 80945" }, { name: "CP Pavithra", phone: "+91 91081 56865" }] },
-    { name: "Mission Unlock", category: "Challenge", description: "[ADD 1–2 LINE DESCRIPTION]", date: "Day 2 · 16 Oct, 1:30–3:00 PM", fee: "₹199 / team", registerUrl: "https://forms.gle/re3h25rZo9D2h1AT9" }
+    { name: "Web Wizards", category: "Web Development", description: "Design, develop and deploy a real website using AI tools. Bring your own laptop.", date: "3 November 2026 · 11:30 AM–1:30 PM", fee: "₹150", prize: "Winners ₹1,500 · Runners-up ₹900", teamSize: "3 members", venue: "ATME College Campus · Room AB401", facultyCoordinator: { name: "Prof. Harshitha V", role: "Assistant Professor", department: "CSE–AI & ML, ATMECE Mysuru" }, coordinators: [{ name: "Nethra", phone: "+91 93806 80945" }, { name: "CP Pavithra", phone: "+91 91081 56865" }] },
+    { name: "Mission Unlock", category: "Challenge", description: "Solve, search and conquer in this offline challenge. Mobile phones are not allowed.", date: "3 November 2026 · 11:00 AM–12:00 PM", fee: "₹199", prize: "Winner ₹1,000 · Runner-up ₹500", teamSize: "4 students", venue: "ATME College Campus", facultyCoordinator: { name: "Prof. Likitha D", role: "Assistant Professor", department: "CSE–AI & ML" }, coordinators: [{ name: "Amruta S Kitturmath", phone: "8217213256" }, { name: "Sai Samarth V", phone: "9353615756" }], registerUrl: "https://forms.gle/re3h25rZo9D2h1AT9" }
   ],
 
   workshop: {
@@ -100,17 +100,26 @@ const grid = $("#eventGrid");
 SITE.events.forEach(ev => {
   const card = make("article", "card reveal");
   card.append(make("span", "tag", ev.category), make("h3", "", ev.name), make("p", "", ev.description));
-  if (ev.coordinators) {
+  if (ev.facultyCoordinator || ev.coordinators) {
     const coordinators = make("div", "coordinators");
-    coordinators.append(make("span", "coordinator-label", "Student coordinators"));
-    ev.coordinators.forEach(person => {
-      const row = make("div", "coordinator");
-      row.append(make("span", "", person.name));
-      const phone = make("a", "", person.phone);
-      phone.href = "tel:" + person.phone.replace(/[^\d+]/g, "");
-      row.append(phone);
-      coordinators.append(row);
-    });
+    if (ev.facultyCoordinator) {
+      coordinators.append(make("span", "coordinator-label", "Faculty coordinator"));
+      coordinators.append(make("span", "faculty-name", ev.facultyCoordinator.name));
+      coordinators.append(make("span", "faculty-details", ev.facultyCoordinator.role + " · " + ev.facultyCoordinator.department));
+    }
+    if (ev.coordinators) {
+      coordinators.append(make("span", "coordinator-label student-label", "Student coordinators"));
+      ev.coordinators.forEach(person => {
+        const row = make("div", "coordinator");
+        row.append(make("span", "", person.name));
+        if (person.phone) {
+          const phone = make("a", "", person.phone);
+          phone.href = "tel:" + person.phone.replace(/[^\d+]/g, "");
+          row.append(phone);
+        }
+        coordinators.append(row);
+      });
+    }
     card.append(coordinators);
   }
   const meta = make("dl", "facts");
